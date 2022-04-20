@@ -21,12 +21,12 @@ public class Demo2FBRegister {
 		driver.get("https://www.facebook.com/");
 		
 		driver.findElement(By.linkText("Create New Account")).click();
-		driver.findElement(By.name("firstname")).sendKeys("Keerthi");
-		driver.findElement(By.name("lastname")).sendKeys("Kamutam");
+		driver.findElement(By.cssSelector("input[name=firstname]")).sendKeys("Keerthi");
+		driver.findElement(By.cssSelector("[name=lastname]")).sendKeys("Kamutam");
 		
-		driver.findElement(By.name("reg_email__")).sendKeys("keerthi@gmail.com");
+		driver.findElement(By.name("reg_email__")).sendKeys("keerthi1234@gmail.com");
 		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("keerthi@gmail.com");
-		driver.findElement(By.name("reg_Passwd__")).sendKeys("keerthi@123");
+		driver.findElement(By.cssSelector("#password_step_input")).sendKeys("keerthi@123");
 		
 		Select selectDay= new Select(driver.findElement(By.id("day")));
 		selectDay.selectByVisibleText("29");
